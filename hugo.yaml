@@ -43,6 +43,11 @@ menu:
         icon: mastodon
 
 params:
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
+  
   navbar:
     displayTitle: true
     displayLogo: false
