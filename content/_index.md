@@ -10,7 +10,7 @@ This is the landing page.
 ## Explore
 
 {{< cards >}}
-  {{< card link="docs" title="Docs" icon="notes" >}}
+  {{< card link="docs" title="Docs" icon="note" >}}
   {{< card link="about" title="About" icon="user" >}}
 {{< /cards >}}
 
