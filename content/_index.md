@@ -1,6 +1,8 @@
 ---
-title: My Site
-toc: false
+title: Script
+toc: true
+sidebar:
+  open: true
 ---
 
 This is the landing page.
@@ -8,7 +10,7 @@ This is the landing page.
 ## Explore
 
 {{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
+  {{< card link="docs" title="Docs" icon="notes" >}}
   {{< card link="about" title="About" icon="user" >}}
 {{< /cards >}}
 
