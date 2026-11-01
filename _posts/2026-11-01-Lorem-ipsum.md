@@ -1,10 +1,11 @@
 ---
 title: Lorem ipsum
-categories: Test, Testing
-tags: Lorem, Ipsum, Sample
+categories: Test Testing
+tags: Lorem Ipsum Sample
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper risus neque, at laoreet eros auctor nec. Ut turpis velit, lacinia sed pretium et, sodales quis libero. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper risus neque, at laoreet eros auctor nec. Ut turpis velit, lacinia sed pretium et, sodales quis libero.
+
 ## Etiam
 Etiam porttitor ipsum eget metus interdum, in semper quam fermentum. *Aenean condimentum eu arcu non aliquam.* Mauris sollicitudin posuere purus sed volutpat. Curabitur ultricies velit vel viverra fringilla. Nunc pulvinar sapien vitae nibh malesuada suscipit id vel ipsum. Nulla non eros in tellus fermentum suscipit. Sed tempus nulla justo, eu sollicitudin velit vulputate id.
 
