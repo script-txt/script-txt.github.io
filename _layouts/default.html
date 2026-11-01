@@ -33,7 +33,14 @@
 
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); }
-  body { margin: 0; background: var(--bg); color: var(--fg); font: 18px/1.7 Lato, sans-serif; }
+  @font-face {
+  font-family: "Lato";
+  src:
+    local("Lato"),
+    url("https://github.com/hakger/latolatin-webfont/blob/4a7162e18a6a01f2ce87dec05c4e4605d8167eb6/fonts/lato-regular.woff2") format("woff2"),
+    url("https://github.com/hakger/latolatin-webfont/blob/4a7162e18a6a01f2ce87dec05c4e4605d8167eb6/fonts/lato-regular.woff") format("woff");
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 18px/1.7 ; font-family: Lato, system-ui, sans-serif; }
   a { color: inherit; text-decoration: none; }
 
   /* En-tête : fond pleine largeur, contenu limité à la largeur de la page */
@@ -85,7 +92,7 @@
     cursor: pointer; list-style: none;
   }
   .sidebar summary::-webkit-details-marker { display: none; }
-  .sidebar summary::after { content: "+"; transition: transform .15s; }
+  .sidebar summary::after { content: ">"; transition: transform .15s; }
   .sidebar details[open] > summary::after { transform: rotate(90deg); }
   .sidebar summary:hover { background: var(--hover); }
   .sidebar details ul { margin: .2rem 0 .4rem .6rem; padding-left: .3rem; border-left: 1px solid var(--border); }
