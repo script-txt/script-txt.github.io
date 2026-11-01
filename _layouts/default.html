@@ -13,7 +13,7 @@
     : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 </script>
 <style>
-  /* Couleurs : light-dark(clair, sombre) suit le thème système, sauf si data-theme le force */
+  /* Couleurs : light-dark(clair, sombre) suit le thème système, sauf si data- le force */
   :root {
     color-scheme: light dark;
     --bg: light-dark(#ffffff, #111111);
@@ -228,12 +228,12 @@
   // Thème : clair ↔ sombre
   const root = document.documentElement;
   const themeBtn = $('#theme-btn');
-  const icons = { light: '☀', dark: '☾' };
+  const icons = { light: '◑', dark: '◑' };
 
   function applyTheme(theme) {
     root.dataset.theme = theme;
     themeBtn.textContent = icons[theme];
-    const label = theme === 'dark' ? 'Passer au thème clair' : 'Passer au thème sombre';
+    const label = theme === 'dark' ? 'On' : 'Off';
     themeBtn.title = label;
     themeBtn.setAttribute('aria-label', label);
   }
