@@ -1,0 +1,17 @@
+---
+title: Catégories
+nav_order: 2
+---
+{% assign sorted_categories = site.categories | sort %}
+{%- for category in sorted_categories %}
+{%- assign categorised_posts = category[1] | sort: "date" | reverse %}
+<h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
+<ul class="post-list">
+  {%- for post in categorised_posts %}
+  <li>
+    <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y %m %d" }}</time>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endfor %}
