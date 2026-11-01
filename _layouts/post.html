@@ -4,7 +4,7 @@ layout: default
 <div class="meta">
   <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y %m %d" }}</time>
   {%- for category in page.categories %}
-  <span class="bubble category" href="{{ '/categories/' | relative_url }}#{{ category | slugify }}">{{ category | escape }}</span>
+  <a class="bubble category" href="{{ '/categories/' | relative_url }}#{{ category | slugify }}">{{ category | escape }}</a>
   {%- endfor %}
   {%- for tag in page.tags %}
   <a class="bubble" href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag | escape }}</a>
