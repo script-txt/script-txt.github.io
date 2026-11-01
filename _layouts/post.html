@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="meta">
-  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%YY %MM %DD" }}</time>
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y %m %d" }}</time>
   {%- for category in page.categories %}
   <span class="bubble category">{{ category | escape }}</span>
   {%- endfor %}
