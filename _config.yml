@@ -1,0 +1,12 @@
+title: Script
+permalink: pretty
+# baseurl: "/nom-du-depot"   # uniquement pour un site de projet
+
+kramdown:
+  transliterated_header_ids: true
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+  - scope: { path: "", type: posts }
+    values: { layout: post }
