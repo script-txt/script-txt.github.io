@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title }} – {{ site.title }}</title>
+<title>{{ page.title }}</title>
 <script>
   // Thème initial avant l'affichage (évite un flash) : choix mémorisé, sinon préférence du système
   let saved;
@@ -85,7 +85,7 @@
     cursor: pointer; list-style: none;
   }
   .sidebar summary::-webkit-details-marker { display: none; }
-  .sidebar summary::after { content: "›"; transition: transform .15s; }
+  .sidebar summary::after { content: "+"; transition: transform .15s; }
   .sidebar details[open] > summary::after { transform: rotate(90deg); }
   .sidebar summary:hover { background: var(--hover); }
   .sidebar details ul { margin: .2rem 0 .4rem .6rem; padding-left: .3rem; border-left: 1px solid var(--border); }
@@ -182,7 +182,7 @@
 
   <!-- Colonne centrale : titre, puis contenu de la page ou de l'article -->
   <main>
-    <h1>{{ page.title }}</h1>
+    <h1>/ {{ page.title }}</h1>
     {{ content }}
   </main>
 
