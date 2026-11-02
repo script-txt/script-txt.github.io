@@ -11,7 +11,7 @@ Etiam porttitor ipsum eget metus interdum, in semper quam fermentum. *Aenean con
 
 > Integer nec magna eu turpis eleifend viverra. Cras urna ligula, tincidunt et ipsum vitae, hendrerit scelerisque nisl.
 
-Sed eleifend nisl id enim convallis efficitur. [Sed rutrum vehicula](https://example.com) dolor, vel dictum libero ultrices a.
+Sed eleifend nisl id enim convallis efficitur. [Sed rutrum vehicula](https://www.example.com) dolor, vel dictum libero ultrices a.
 
 ## Aenean lacinia
 Aenean lacinia commodo leo, eu elementum justo maximus sit amet. Vestibulum pharetra orci et risus imperdiet sagittis. Aenean diam augue, tempor in convallis id, dignissim a ligula. Sed vulputate felis sed lorem dapibus sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In at iaculis risus. Praesent ut aliquet purus, vitae mattis mauris.
