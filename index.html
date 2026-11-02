@@ -2,12 +2,19 @@
 title: Index
 nav_order: 1
 ---
-{% assign sorted_posts = site.posts | sort: "date" | reverse %}
+
+
+
+{% assign ordered_posts = site.posts | sort: "date" | reverse %}
+{%- for post in ordered_posts %}
+{%- assign ordered_posts = order[1] | sort: "date" | reverse %}
+<h2 id="{{ oreder[0] | slugify }}"; style="border-bottom: none">{{ order[0] }}</h2>
 <ul class="post-list">
-  {%- for post in sorted_posts %}
+  {%- for post in oredered_posts %}
   <li>
-    <h2 style="border-bottom: none;"><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y %m %d" }}</time>
-    {{ post.excerpt }}
+    <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y %m %d" }}</time>
   </li>
   {%- endfor %}
 </ul>
+{%- endfor %}
