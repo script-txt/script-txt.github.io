@@ -6,8 +6,8 @@ nav_order: 1
 <ul style="list-style:none; margin:0; padding:0">
   {% for post in site.posts | sort: "date" | reverse %}
     <li>
-      <p id="{{ post.title | slugify }}" style="font-weight:bold"><a href="{{ post.url }}" style="color:var(--fg) hover:var(--accent)">{{ post.title }}</a></p>
-      {{ post.excerpt }}
+      <p id="{{ post.title | slugify }}" style="font-weight:bold"><a href="{{ post.url }}" style="color:var(--fg) :hover:color:var(--accent)">{{ post.title }}</a></p>
+      <p style="color:var(--muted)">{{ post.excerpt }}</p>
     </li>
   {% endfor %}
 </ul>
