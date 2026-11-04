@@ -192,14 +192,28 @@
   </main>
 
   <!-- Colonne droite : liste des <h2> (porteurs d'un id) extraite du contenu rendu -->
-  <aside class="toc" aria-label="Sur cette page">
+  <aside class="toc" aria-label="Menu">
     {%- assign parts = content | split: '<h2 id="' %}
     {%- if parts.size > 1 %}
-    <p class="toc-title">Sur cette page</p>
+    <p class="toc-title">Menu</p>
     <ul>
       {%- for part in parts offset: 1 %}
       {%- assign heading_id = part | split: '"' | first %}
       {%- assign heading_text = part | split: '</h2>' | first | split: '">' | last | strip_html %}
+      <li><a href="#{{ heading_id }}">{{ heading_text }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </aside>
+
+  <aside class="toc" aria-label="Menu">
+    {%- assign partsp = content | split: '<p id="' %}
+    {%- if partsp.size > 1 %}
+    <p class="toc-title">Menu</p>
+    <ul>
+      {%- for part in partsp offset: 1 %}
+      {%- assign heading_id = part | split: '"' | first %}
+      {%- assign heading_text = part | split: '</p>' | first | split: '">' | last | strip_html %}
       <li><a href="#{{ heading_id }}">{{ heading_text }}</a></li>
       {%- endfor %}
     </ul>
