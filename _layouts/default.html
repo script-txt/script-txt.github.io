@@ -29,8 +29,8 @@
   a { color: inherit; }
   :focus-visible { outline: 1px solid; outline-offset: 2px; }
   p {  }
-  h1 { font-style: stronger; }
-  h2 { font-style: strong; border-bottom: 1px solid; }
+  h1 { font-size: medium; font-style: stronger; }
+  h2 { font-size:medium; font-style: strong; border-bottom: 1px solid; }
   pre { overflow-x: auto; padding: 1rem; border: 1px solid; }
   code { background: darker; border-radius: 2px }
   img { max-width: 100%; border-radius: 2px }
@@ -49,14 +49,12 @@
   nav [aria-current] { font-weight: 700; }
   .toc { display: none; }
   main { max-width: 40rem; padding: 1rem 1rem 3rem; }
-  body { font-size: large; }
 
   /* Tablette : menu à gauche */
   @media (min-width: 48rem) {
     .layout { grid-template-columns: 14rem minmax(0, 1fr); }
     nav, .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
     nav ul { flex-direction: column; gap: .5rem; }
-    body { font-size: large; }
   }
   /* Ordinateur : trois colonnes, texte limité à 40 rem (≈ 65 caractères) */
   @media (min-width: 64rem) {
