@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% unless page.url == '/' %}{{ page.title }}</title>
+<title>{% unless page.url == '/' %}{{ page.title }} – {% endunless %}</title>
 <script>
   // Thème : choix mémorisé, sinon préférence du système
   const root = document.documentElement;
@@ -15,7 +15,6 @@
   }
 </script>
 <style>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>;
   /* Noir et blanc uniquement */
   :root { color-scheme: light dark; --bg: light-dark(#ffffff, #000000); --fg: light-dark(#000000, #ffffff); }
   :root[data-theme="light"] { color-scheme: light; }
@@ -28,10 +27,12 @@
   }
   a { color: inherit; }
   :focus-visible { outline: 1px solid; outline-offset: 2px; }
-  h2 { border-bottom: 1px solid; }
+  p {  }
+  h1, h2 {  }
+  h2 { margin: 2rem 0 1rem; padding-bottom: .25rem; border-bottom: 1px solid; }
   pre { overflow-x: auto; padding: 1rem; border: 1px solid; }
   code { font-size: .9em; }
-  img { max-width: 100%; border-radius: 2px; }
+  img { max-width: 100%; }
 
   header { display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; border-bottom: 1px solid; }
   button { font: inherit; color: inherit; background: none; border: 1px solid; border-radius: .25rem; padding: .25rem .6rem; cursor: pointer; }
