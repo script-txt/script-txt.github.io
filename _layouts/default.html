@@ -49,6 +49,7 @@
   nav [aria-current] { font-weight: 700; }
   .toc { display: none; }
   main { max-width: 40rem; padding: 1rem 1rem 3rem; }
+  p { font-size: large; }
 
   /* Tablette : menu à gauche */
   @media (min-width: 48rem) {
@@ -56,6 +57,7 @@
     nav, .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
     nav ul { flex-direction: column; gap: .5rem; }
   }
+  p { font-size: large; }
   /* Ordinateur : trois colonnes, texte limité à 40 rem (≈ 65 caractères) */
   @media (min-width: 64rem) {
     .layout { grid-template-columns: 14rem minmax(0, 40rem) 12rem; justify-content: center; }
