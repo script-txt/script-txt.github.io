@@ -28,13 +28,16 @@
   :focus-visible { outline: 1px solid; outline-offset: 2px; }
   p { line-height: 1.5; }
   h1 { font-size: 1rem; font-style: strong; }
-  h2 { font-size: 1rem; font-style: strong; border-bottom: 1px solid; border-color: lightgrey;}
+  h2 { font-size: 1rem; font-style: strong; border-bottom: 1px solid;}
   pre { overflow-x: auto; padding: 1rem; border: 1px solid; border-radius: 5px; }
-  code { background: lightgrey; }
+  code { }
   img { max-width: 100%; border-radius: 5px }
+  categories { border: 1px solid; border-radius: 999px; color: var(--bg); background: var(--fg);}
+  tags { border: 1px solid; border-radius: 999px}
+  status { border: 1px solid; border-radius: 999px }
 
-  header { font-size: 1rem; font-style: strong; display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; border-bottom: 1px solid; }
-  a.header { text-decoration: none; }
+  header { font-size: 1rem; font-style: strong; display: flex; justify-content: space-between; align-items: center; padding: 1rem; border-bottom: 1px solid; }
+  header.a { text-decoration: none; }
   button { font: inherit; color: inherit; background: none; border: 1px solid; border-radius: .25rem; padding: .25rem .6rem; cursor: pointer; }
 
   /* Mobile : une colonne, menu en ligne, sommaire masqué */
@@ -47,8 +50,7 @@
   nav a:hover, .toc a:hover { text-decoration: underline; }
   nav [aria-current] { font-weight: 700; }
   .toc { display: none; }
-  main { max-width: 40rem; padding: 1rem 1rem 3rem; }
-  html { font-size: 1.2rem; }
+  main { max-width: 100%; padding: 1rem 1rem 3rem; }
 
   /* Tablette : menu à gauche */
   @media (min-width: 48rem) {
@@ -56,7 +58,7 @@
     nav, .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
     nav ul { flex-direction: column; gap: .5rem; }
   }
-  p { font-size: large; }
+  
   /* Ordinateur : trois colonnes, texte limité à 40 rem (≈ 65 caractères) */
   @media (min-width: 64rem) {
     .layout { grid-template-columns: 14rem minmax(0, 40rem) 12rem; justify-content: center; }
