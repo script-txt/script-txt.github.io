@@ -13,7 +13,7 @@ Un environnement récent et un éditeur de texte suffisent.
 <ul style="list-style:none; margin:0; padding:0">
   {% for post in site.posts | sort: "date" | reverse %}
     <li>
-      <p id="{{ post.title | slugify }}"><a href="{{ post.url }}">{{ post.title }}</a></p>
+      <h2 id="{{ post.title | slugify }}"><a href="{{ post.url }}">{{ post.title }}</a></h2>
       {{ post.excerpt }}
     </li>
   {% endfor %}
