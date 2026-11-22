@@ -23,16 +23,14 @@
 
   /* Lisibilité : 16 → 18 px selon la largeur d'écran, interligne 1,6 */
   * { box-sizing: border-box; }
-  html {
-    font-family: Lato, sans-serif; margin: 0; background: var(--bg); color: var(--fg);
-  }
+  html { font-size: 1rem; font-family: Lato, sans-serif; background: var(--bg); color: var(--fg); }
   a { color: inherit; }
   :focus-visible { outline: 1px solid; outline-offset: 2px; }
-  p {  }
-  h1 { font-style: stronger; }
-  h2 { font-style: stronger; border-bottom: 1px solid; }
-  pre { overflow-x: auto; padding: 1rem; border: 1px solid; }
-  code { background: darker; border-radius: 2px }
+  p { line-height: 1.5; }
+  h1 { font-size: 1rem; font-style: strong; }
+  h2 { font-size: 1rem; font-style: strong; border-bottom: 1px solid; }
+  pre { overflow-x: auto; padding: 1rem; border: 1px solid; border-radius: 2px; }
+  code { background: var(--fg) -50%; }
   img { max-width: 100%; border-radius: 2px }
 
   header { display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; border-bottom: 1px solid; }
