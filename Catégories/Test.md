@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Note
 nav_order: 2
 ---
 Ce guide décrit l'installation, de la récupération des sources au premier lancement.
