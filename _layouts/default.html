@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 <title>{% unless page.url == '/' %}{{ page.title }}{% endunless %}</title>
 <script>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>;
   // Thème : choix mémorisé, sinon préférence du système
   const root = document.documentElement;
   try { root.dataset.theme = localStorage.theme || ''; } catch {}
