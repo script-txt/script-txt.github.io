@@ -1,0 +1,5 @@
+title: Ma documentation
+permalink: pretty
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
