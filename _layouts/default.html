@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% unless page.url == '/' %}{{ page.title }}</title>
 <script>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>;
   // Thème : choix mémorisé, sinon préférence du système
   const root = document.documentElement;
   try { root.dataset.theme = localStorage.theme || ''; } catch {}
@@ -16,6 +15,7 @@
   }
 </script>
 <style>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>;
   /* Noir et blanc uniquement */
   :root { color-scheme: light dark; --bg: light-dark(#ffffff, #000000); --fg: light-dark(#000000, #ffffff); }
   :root[data-theme="light"] { color-scheme: light; }
@@ -25,7 +25,6 @@
   * { box-sizing: border-box; }
   body {
     margin: 0; background: var(--bg); color: var(--fg);
-    font-size: medium;
     line-height: 1.6;
     font-family: Lato, sans-serif;
   }
