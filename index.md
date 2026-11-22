@@ -4,10 +4,10 @@ nav_order: 1
 ---
 Cette documentation présente l'installation et l'utilisation du projet.
 
-## Présentation
+Présentation
 Le projet fournit une bibliothèque simple, sans dépendance.
 
-## Prérequis
+Prérequis
 Un environnement récent et un éditeur de texte suffisent.
 
 <ul style="list-style:none; margin:0; padding:0">
