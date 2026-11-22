@@ -16,7 +16,7 @@
 </script>
 <style>
   /* Noir et blanc uniquement */
-  :root { color-scheme: light dark; --bg: light-dark(#fff, #000); --fg: light-dark(#000, #fff); }
+  :root { color-scheme: light dark; --bg: light-dark(#ffffff, #000000); --fg: light-dark(#000000, #ffffff); }
   :root[data-theme="light"] { color-scheme: light; }
   :root[data-theme="dark"] { color-scheme: dark; }
 
@@ -24,7 +24,9 @@
   * { box-sizing: border-box; }
   body {
     margin: 0; background: var(--bg); color: var(--fg);
-    font: clamp(1rem, .95rem + .3vw, 1.125rem)/1.6 Lato, sans-serif;
+    font-size: large;
+    line-height: 1.6;
+    font-family: Lato, sans-serif;
   }
   a { color: inherit; }
   :focus-visible { outline: 2px solid; outline-offset: 2px; }
