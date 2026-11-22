@@ -1,5 +1,5 @@
 ---
-Title: Catégories
+title: Catégories
 ___
 
 Catégories du site
