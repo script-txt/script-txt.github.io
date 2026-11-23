@@ -10,10 +10,10 @@ Le projet fournit une bibliothèque simple, sans dépendance.
 Prérequis
 Un environnement récent et un éditeur de texte suffisent.
 
-<ul style="list-style:none;">
+<ul>
   {% for post in site.posts | sort: "date" | reverse %}
-    <li style="display:block;">
-      <h2 style="text-decoration:none;" id="{{ post.title | slugify }}"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <li style="list-style:none;">
+      <h2 id="{{ post.title | slugify }}"><a href="{{ post.url }}">{{ post.title }}</a></h2>
       {{ post.excerpt }}
     </li>
   {% endfor %}
