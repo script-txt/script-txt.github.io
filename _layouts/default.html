@@ -3,8 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-<title>{% unless page.url == '/' %}{{ page.title }}{% endunless %}</title>
 <script>
   // Thème : choix mémorisé, sinon préférence du système
   const root = document.documentElement;
@@ -15,57 +13,8 @@
     try { localStorage.theme = root.dataset.theme; } catch {}
   }
 </script>
-<style>
-  /* Noir et blanc uniquement */
-  :root { color-scheme: light dark; --bg: light-dark(#ffffff, #000000); --fg: light-dark(#000000, #ffffff); }
-  :root[data-theme="light"] { color-scheme: light; }
-  :root[data-theme="dark"] { color-scheme: dark; }
-
-  /* Lisibilité : 16 → 18 px selon la largeur d'écran, interligne 1,6 */
-  * { box-sizing: border-box; }
-  html { font-size: 1rem; font-family: Lato, sans-serif; background: var(--bg); color: var(--fg); }
-  a { color: inherit; }
-  :focus-visible { outline: 1px solid; outline-offset: 2px; }
-  p { line-height: 1.5; }
-  h1 { font-size: 1rem; font-style: strong; }
-  h2 { font-size: 1rem; font-style: strong; border-bottom: 1px solid;}
-  pre { overflow-x: auto; padding: 1rem; border: 1px solid; border-radius: 5px; }
-  code { }
-  img { max-width: 100%; border-radius: 5px }
-  categories { border: 1px solid; border-radius: 999px; color: var(--bg); background: var(--fg);}
-  tags { border: 1px solid; border-radius: 999px}
-  status { border: 1px solid; border-radius: 999px }
-  q { margin: 1rem; border-left: 1px; font-style: italic; }
-
-  header { font-size: 1rem; font-style: strong; display: flex; justify-content: space-between; align-items: center; padding: 1rem; border-bottom: 1px solid; }
-  header.a { text-decoration: none; }
-  button { font: inherit; color: inherit; background: none; border: 1px solid; border-radius: .25rem; padding: .25rem .6rem; cursor: pointer; }
-
-  /* Mobile : une colonne, menu en ligne, sommaire masqué */
-  .layout { display: grid; max-width: 80rem; margin: 0 auto; }
-  nav, .toc { padding: 1rem; }
-  nav ul, .toc ul { list-style: none; margin: 0; padding: 0; }
-  nav ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
-  .toc li { margin: .5rem 0; }
-  nav a, .toc a { text-decoration: none; }
-  nav a:hover, .toc a:hover { text-decoration: underline; }
-  nav [aria-current] { font-weight: 700; }
-  .toc { display: none; }
-  main { max-width: 100%; padding: 1rem 1rem 3rem; }
-
-  /* Tablette : menu à gauche */
-  @media (min-width: 48rem) {
-    .layout { grid-template-columns: 14rem minmax(0, 1fr); }
-    nav, .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
-    nav ul { flex-direction: column; gap: .5rem; }
-  }
-  
-  /* Ordinateur : trois colonnes, texte limité à 40 rem (≈ 65 caractères) */
-  @media (min-width: 64rem) {
-    .layout { grid-template-columns: 14rem minmax(0, 40rem) 12rem; justify-content: center; }
-    .toc { display: block; }
-  }
-</style>
+<link rel="stylesheet" href="{{ '/layout.css' | relative_url }}">
+<title>{% unless page.url == '/' %}{{ page.title }} – {% endunless %}{{ site.title }}</title>
 </head>
 <body>
 
@@ -74,35 +23,34 @@
   <button type="button" onclick="toggleTheme()" aria-label="Changer de thème" title="Changer de thème">◐</button>
 </header>
 
-<div class="layout">
+<!-- Colonne 1 : navigation -->
+<nav aria-label="Navigation">
+  <ul>
+    {%- assign docs = site.pages | where_exp: "p", "p.title" | sort: "nav_order" %}
+    {%- for p in docs %}
+    <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} aria-current="page"{% endif %}>{{ p.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</nav>
 
-  <nav aria-label="Navigation">
-    <ul>
-      {%- assign docs = site.pages | where_exp: "p", "p.title" | sort: "nav_order" %}
-      {%- for p in docs %}
-      <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} aria-current="page"{% endif %}>{{ p.title }}</a></li>
-      {%- endfor %}
-    </ul>
-  </nav>
+<!-- Colonne 2 : contenu -->
+<main>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</main>
 
-  <main>
-    <h1>/ {{ page.title }}</h1>
-    {{ content }}
-  </main>
-
-  <aside class="toc" aria-label="Sur cette page">
-    {%- assign parts = content | split: '<h2 id="' %}
-    {%- if parts.size > 1 %}
-    <strong>Sur cette page</strong>
-    <ul>
-      {%- for part in parts offset: 1 %}
-      <li><a href="#{{ part | split: '"' | first }}">{{ part | split: '</h2>' | first | split: '">' | last | strip_html }}</a></li>
-      {%- endfor %}
-    </ul>
-    {%- endif %}
-  </aside>
-
-</div>
+<!-- Colonne 3 : sommaire de la page -->
+<aside aria-label="Sur cette page">
+  {%- assign parts = content | split: '<h2 id="' %}
+  {%- if parts.size > 1 %}
+  <strong>Sur cette page</strong>
+  <ul>
+    {%- for part in parts offset: 1 %}
+    <li><a href="#{{ part | split: '"' | first }}">{{ part | split: '</h2>' | first | split: '">' | last | strip_html }}</a></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</aside>
 
 </body>
 </html>
