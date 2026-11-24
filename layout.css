@@ -7,7 +7,7 @@ a { color: inherit; }
 button { font: inherit; color: inherit; background: none; border: 1px solid; border-radius: .25rem; cursor: pointer; }
 
 /* Placement : mobile → 1 colonne ; tablette → menu + contenu ; ordinateur → 3 colonnes */
-body { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 80rem; margin: 0 auto; }
+body { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 80rem; margin: 0 auto; font-size: 1rem;}
 header { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; }
 header, nav, main, aside { padding: 1rem; }
 main { max-width: 40rem; }
