@@ -32,7 +32,7 @@
     <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} aria-current="page"{% endif %}>{{ p.title }}</a></li>
     {%- endfor %}
   </ul>
-  {%- assign categories = site.categories | sort %}
+  <!--- {%- assign categories = site.categories | sort %}
     {%- for category in categories %}
     {%- assign category_posts = category[1] | sort: "date" | reverse %}
     <details{% if page.categories contains category[0] %} open{% endif %}>
@@ -43,7 +43,7 @@
         {%- endfor %}
       </ul>
     </details>
-    {%- endfor %}
+    {%- endfor %}--->
 </nav>
 
 <!-- Colonne 2 : contenu -->
