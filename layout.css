@@ -12,7 +12,7 @@ header { grid-column: 1 / -1; display: flex; justify-content: space-between; ali
 header, nav, main, aside { padding: 1rem; }
 main { max-width: 40rem; }
 main ul { margin: 0; }
-main h1 { padding-top: 0; font-size: 1.15rem; font-weight: 800; }
+main h1 { top: 0; font-size: 1.15rem; }
 main h2 { padding-bottom: .25rem; border-bottom: 1px solid; font-size: 1.15rem; }
 nav ul, aside ul { margin: 0; padding: 0; list-style: none; }
 nav summary { font-style: bold; }
