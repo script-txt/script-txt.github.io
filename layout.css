@@ -17,12 +17,12 @@ nav ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
 aside { display: none; }
 
 @media (min-width: 48rem) {
-  body { grid-template-columns: 14rem minmax(0, 1fr); }
+  body { grid-template-columns: 14rem minmax(0, 1fr); font-size: 1rem;}
   nav, aside { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
   nav ul { flex-direction: column; gap: .5rem; }
 }
 
 @media (min-width: 64rem) {
-  body { grid-template-columns: 14rem minmax(0, 40rem) 12rem; justify-content: center; }
+  body { grid-template-columns: 14rem minmax(0, 40rem) 12rem; justify-content: center; font-size: 1rem;}
   aside { display: block; }
 }
