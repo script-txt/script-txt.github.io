@@ -14,8 +14,7 @@ main { max-width: 40rem; }
 main ul { margin: 0; }
 main h1 { padding-top: 0; font-size: 1.1rem; font-weight: 800; }
 main h2 { padding-bottom: .25rem; border-bottom: 1px solid; font-size: 1.1rem; }
-nav ul, aside ul { margin: 0; padding: 0; list-style: none; }
-nav ul, aside ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
+nav ul, aside ul, nav summary { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
 aside { display: none; }
 blockquote { font-style: italic; border-left: 1px solid; padding-left: 1rem; margin: 0; }
 pre { overflow-x: auto; }
