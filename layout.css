@@ -12,7 +12,7 @@ header { grid-column: 1 / -1; display: flex; justify-content: space-between; ali
 header, nav, main, aside { padding: 1rem; }
 main { max-width: 40rem; }
 main ul { margin: 0; }
-main h1 { color: light-dark(#fff, #000); background: light-dark(#000, #fff); margin-top: 0; font-size: 1.2rem; border-radius: 1rem; padding: 0.2rem; }
+main h1 { color: light-dark(#fff, #000); background: light-dark(#000, #fff); margin-top: 0; font-size: 1.2rem; border-radius: 1rem; padding: 0.1rem; }
 main h2 { border-bottom: 1px solid; font-size: 1.2rem; }
 nav ul, aside ul { margin: 0; padding: 0; list-style: none; }
 nav ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
