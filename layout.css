@@ -31,6 +31,6 @@ categories { border-radius: 999px; color: light-dark(#fff, #000); background: li
 }
 
 @media (min-width: 64rem) {
-  body { grid-template-columns: 14rem minmax(0, 40rem) 12rem; justify-content: center; }
+  body { grid-template-columns: 13rem minmax(0, 40rem) 13rem; justify-content: center; }
   aside { display: block; }
 }
