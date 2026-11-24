@@ -49,7 +49,7 @@
 <!-- Colonne 2 : contenu -->
 <main>
   <h1>/ {{ page.title }}</h1>
-  <div class="meta">
+  <div>
   <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y %m %d" }}</time>
   {%- for category in page.categories %}
   <a class="categories" href="{{ '/categories/' | relative_url }}#{{ category | slugify }}">{{ category | escape }}</a>
@@ -62,7 +62,7 @@
 </main>
 
 <!-- Colonne 3 : sommaire de la page -->
-<aside aria-label="Sur cette page">
+<aside aria-label="Menu">
   {%- assign parts = content | split: '<h2 id="' %}
   {%- if parts.size > 1 %}
   <strong>Sur cette page</strong>
