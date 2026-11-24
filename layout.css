@@ -20,8 +20,9 @@ aside { display: none; }
 blockquote { font-style: italic; border-left: 1px solid; padding-left: 1rem; margin: 0; }
 pre { overflow-x: auto; }
 img { display: block; max-width: 100%; height: auto; border-radius: 1rem; }
-tags { border-radius: 999px; background: light-dark(#fff, #000); color: light-dark(#000, #fff); }
+tags { border-radius: 999px; background: light-dark(#fff, #000); color: light-dark(#000, #fff); border: 1px solid; }
 categories { border-radius: 999px; color: light-dark(#fff, #000); background: light-dark(#000, #fff); }
+tags a, categories a { text-decoration: none; }
 
 @media (min-width: 48rem) {
   body { grid-template-columns: 14rem minmax(0, 1fr); }
