@@ -33,6 +33,6 @@ img { display: block; max-width: 100%; height: auto; border-radius: 1rem; }
 }
 
 @media (min-width: 64rem) {
-  body { grid-template-columns: 13rem auto 13rem; justify-content: center; }
+  body { grid-template-columns: 13rem 40rem 13rem; justify-content: center; }
   aside { display: block; }
 }
