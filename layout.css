@@ -2,7 +2,7 @@
 :root { color-scheme: light dark; }
 :root[data-theme="light"] { color-scheme: light; }
 :root[data-theme="dark"] { color-scheme: dark; }
-body { background: light-dark(#fff, #000); color: light-dark(#000, #fff); }
+body { background: light-dark(#fff, #121212); color: light-dark(#121212, #fff); }
 a { color: inherit; }
 button { font: inherit; color: inherit; background: none; border: 1px solid; border-radius: .25rem; cursor: pointer; }
 
