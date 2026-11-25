@@ -7,13 +7,13 @@ a { color: inherit; }
 button { font: inherit; color: inherit; background: none; border: 1px solid; border-radius: .25rem; cursor: pointer; }
 
 /* Placement : mobile → 1 colonne ; tablette → menu + contenu ; ordinateur → 3 colonnes */
-body { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 80rem; margin: 0 auto; top:0; font-family: Lato, sans-serif; font-size: 1.2rem; }
+body { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 80rem; margin: 0 auto; top:0; font-family: Lato, sans-serif; font-size: 1.25rem; line-height: 1.5; }
 header { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid; }
 header, nav, main, aside { padding: 1rem; }
 main { max-width: 40rem; }
 main ul { margin: 0; }
-main h1 { color: light-dark(#fff, #000); background: light-dark(#000, #fff); margin-top: 0; font-size: 1.2rem; padding: 0.12rem; }
-main h2 { border-bottom: 1px solid; font-size: 1.2rem; }
+main h1 { color: light-dark(#fff, #000); background: light-dark(#000, #fff); margin-top: 0; font-size: 1.25rem; padding: 0.12rem; }
+main h2 { border-bottom: 1px solid; font-size: 1.25rem; }
 nav ul, aside ul { margin: 0; padding: 0; list-style: none; }
 nav ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
 nav summary { font-style: bold; }
@@ -23,7 +23,7 @@ pre { overflow-x: auto; }
 img { display: block; max-width: 100%; height: auto; border-radius: 1rem; }
 tags { border-radius: 999px; color: light-dark(#000, #fff); border: 1px solid; display: inline-block; padding: 0.2rem; }
 categories { border-radius: 999px; color: light-dark(#fff, #000); background: light-dark(#000, #fff); display: inline-block; padding: 0.2rem; }
-/*tags a, categories a { text-decoration: none; }*/
+categories a { text-decoration: none; }
 
 @media (min-width: 48rem) {
   body { grid-template-columns: 14rem minmax(0, 1fr); }
