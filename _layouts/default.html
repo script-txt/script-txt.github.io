@@ -21,7 +21,7 @@
 
 <header>
   <a style="text-decoration: none" href="{{ '/' | relative_url }}"><strong>{{ site.title }}</strong></a>
-  <button type="button" onclick="toggleTheme()" aria-label="Changer de thème" title="Changer de thème">◐</button>
+  <button type="button" onclick="toggleTheme()" aria-label="ON/OFF" title="ON/OFF">◐</button>
 </header>
 
 <!-- Colonne 1 : navigation -->
@@ -62,10 +62,10 @@
 </main>
 
 <!-- Colonne 3 : sommaire de la page -->
-<aside aria-label="Menu">
+<aside aria-label="Index">
   {%- assign parts = content | split: '<h2 id="' %}
   {%- if parts.size > 1 %}
-  <strong>Sur cette page</strong>
+  <strong>Index</strong>
   <ul>
     {%- for part in parts offset: 1 %}
     <li><a href="#{{ part | split: '"' | first }}">{{ part | split: '</h2>' | first | split: '">' | last | strip_html }}</a></li>
