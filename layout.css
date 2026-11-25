@@ -12,7 +12,7 @@ header { grid-column: 1 / -1; display: flex; justify-content: space-between; ali
 header, nav, main, aside { padding: 1rem; }
 main { max-width: 40rem; }
 main ul { margin: 0; }
-main h1 { color: light-dark(#fff, #000); background: light-dark(#000, #fff); margin-top: 0; font-size: 1.25rem; padding: 0.12rem; }
+main h1 { margin-top: 0; font-size: 1.25rem; padding: 0.12rem; }
 main h2 { border-bottom: 1px solid; font-size: 1.25rem; }
 nav ul, aside ul { margin: 0; padding: 0; list-style: none; }
 nav ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
@@ -21,8 +21,8 @@ aside { display: none; }
 blockquote { font-style: italic; border-left: 1px solid; padding-left: 1rem; margin: 0; }
 pre { overflow-x: auto; }
 img { display: block; max-width: 100%; height: auto; border-radius: 1rem; }
-tags { border-radius: 999px; color: light-dark(#000, #fff); border: 1px solid; display: inline-block; padding: 0.2rem; }
-categories { border-radius: 999px; color: light-dark(#fff, #000); background: light-dark(#000, #fff); display: inline-block; padding: 0.2rem; }
+.tags { border-radius: 999px; color: light-dark(#000, #fff); border: 1px solid; display: inline-block; padding: 0.2rem; }
+.categories { border-radius: 999px; color: light-dark(#fff, #000); background: light-dark(#000, #fff); display: inline-block; padding: 0.2rem; }
 categories a { text-decoration: none; }
 
 @media (min-width: 48rem) {
@@ -32,6 +32,6 @@ categories a { text-decoration: none; }
 }
 
 @media (min-width: 64rem) {
-  body { grid-template-columns: 13rem minmax(0, 40rem) 13rem; justify-content: center; }
+  body { grid-template-columns: 13rem /*minmax(0, 40rem)*/ 13rem; justify-content: center; }
   aside { display: block; }
 }
