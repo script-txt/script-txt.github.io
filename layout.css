@@ -7,7 +7,7 @@ a { color: inherit; }
 button { font: inherit; color: inherit; background: none; border: 1px solid; border-radius: .25rem; cursor: pointer; }
 
 /* Placement : mobile → 1 colonne ; tablette → menu + contenu ; ordinateur → 3 colonnes */
-body { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 80rem; margin: 0 auto; top:0; font-family: "Times New Roman","Times",Lato, serif; font-size: 1.3rem; font-weight: 300; line-height: 1.5; }
+body { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 80rem; margin: 0 auto; top:0; font-family: "Times New Roman","Times", serif; font-size: 1.3rem; font-weight: 400; line-height: 1.5; }
 header { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid; }
 header, nav, main, aside { padding: 1rem }
 main { max-width: 40rem; }
