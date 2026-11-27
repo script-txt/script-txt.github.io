@@ -10,9 +10,8 @@ Un environnement récent et un éditeur de texte suffisent.
 <ul>
   {% for post in site.posts | sort: "date" | reverse %}
     <li style="list-style:none; display: block;">
-      <a href="{{ post.url }}"><h2 id="{{ post.title | slugify }}"&&style="text-decoration:none;">{{ post.title }}</h2>
-      {{ post.excerpt }}
-      </a>
+      <h2 id="{{ post.title | slugify }}" style="text-decoration:none;">{{ post.title }}</h2>
+      {{ post.excerpt }} <a href="{{ post.url }}">via</a>
     </li>
   {% endfor %}
 </ul>
