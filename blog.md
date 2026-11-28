@@ -1,5 +1,5 @@
 ---
-title: Blog
+title: Index
 nav_order: 1
 ---
 Cette documentation présente l'installation et l'utilisation du projet.
